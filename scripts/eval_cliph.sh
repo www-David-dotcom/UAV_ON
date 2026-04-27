@@ -5,7 +5,7 @@ echo $PWD
 CUDA_VISIBLE_DEVICES=0 python -u $root_dir/src/eval_cliph.py \
     --maxActions 150 \
     --eval_save_path $root_dir/CLIP_logs/scene \
-    --dataset_path your/dataset/path  \
+    --dataset_path ../DATASET/val_all.json  \
     --is_fixed  true\
     --gpu_id 0 \
     --batchSize 1 \

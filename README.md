@@ -73,7 +73,23 @@ Watch a full successful flight of our Aerial ObjectNav Agent in action:
 
 - **Step3: Get dataset json files**
 
-    You can download dataset from [here](https://huggingface.co/datasets/Kyaren/UAV-ON-dataset)，you can use [script](https://github.com/Kyaren/UAV_ON/tree/main/scripts) to merge split data files into a single JSON file
+    You can download dataset from [here](https://huggingface.co/datasets/Kyaren/UAV-ON-dataset). The dataset is split into per-scene JSON files under `trainset/` and `valset/`. The evaluation/training code expects a **single** JSON file via `--dataset_path`, so you need to merge the per-scene files first.
+
+    Use [`scripts/merge_dataset.py`](scripts/merge_dataset.py) to produce a single merged JSON:
+
+    ```bash
+    # validation split
+    python scripts/merge_dataset.py \
+        --input_dir ../DATASET/UAV-ON-data/valset \
+        --output    ../DATASET/val_all.json
+
+    # training split
+    python scripts/merge_dataset.py \
+        --input_dir ../DATASET/UAV-ON-data/trainset \
+        --output    ../DATASET/train_all.json
+    ```
+
+    Then point `--dataset_path` in the eval scripts (e.g. `scripts/eval_cliph.sh`) at the merged file (e.g. `../DATASET/val_all.json`).
 
 - **Project directory structure**
   
