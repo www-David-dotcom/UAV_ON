@@ -108,7 +108,7 @@ Watch a full successful flight of our Aerial ObjectNav Agent in action:
   1.First, you should launch the AirSim environment server.
 
   ```bash
-  python airsim_plugin/AirVLNSimulatorServerTool.py --port=30000 --root_path= "your workspace path"
+  python airsim_plugin/AirVLNSimulatorServerTool.py --port=30000 --root_path= "the TEST_ENVS directory path"
   ```
 
   2.Then, you can execute the bash script to run the simulator
@@ -129,7 +129,7 @@ Watch a full successful flight of our Aerial ObjectNav Agent in action:
   pip uninstall msgpack-python msgpack-rpc-python
   pip install msgpack-rpc-python
   ```
-
+**Note that you must restart BOTH the server and client after installing the correct package version.**
 
 
 
