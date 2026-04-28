@@ -108,7 +108,7 @@ Watch a full successful flight of our Aerial ObjectNav Agent in action:
   1.First, you should launch the AirSim environment server.
 
   ```bash
-  python airsim_plugin/AirVLNSimulatorServerTool.py --port=30000 --root_path= "the TEST_ENVS directory path"
+  python airsim_plugin/AirVLNSimulatorServerTool.py --port=30005 --root_path="../TEST_ENVS"
   ```
 
   2.Then, you can execute the bash script to run the simulator
@@ -141,3 +141,19 @@ Watch a full successful flight of our Aerial ObjectNav Agent in action:
 ### **Acknowledgment**
 
 - The simulation interaction module of this project is built upon the works of [AirVLN](https://github.com/AirVLN/AirVLN/) and [TravelUAV](https://github.com/prince687028/TravelUAV/). We sincerely thank them for their outstanding contributions.
+
+### Datasets
+Barnyard.json      
+BrushifyUrban.json  
+CityPark.json    
+DownTown.json      
+NYC.json   
+UrbanJapan.json  
+WesternTown.json
+BrushifyRoad.json  
+CabinLake.json      
+CityStreet.json
+**Neighborhood.json**  
+Slum.json  
+Venice.json      
+**WinterTown.json**

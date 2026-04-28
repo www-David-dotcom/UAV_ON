@@ -39,7 +39,9 @@ def main():
                 f"{p}: expected a top-level JSON list, "
                 f"got {type(episodes).__name__}"
             )
-        merged.extend(episodes)
+        for ep in episodes:
+            ep["episode_id"] = str(len(merged))
+            merged.append(ep)
         print(f"  + {os.path.basename(p)}: {len(episodes)} episodes")
 
     out_dir = os.path.dirname(os.path.abspath(args.output))
